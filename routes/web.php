@@ -74,10 +74,10 @@ Route::group(['prefix' => 'admin'], function () {
     | Clients Routes
     |--------------------------------------------------------------------------
     */
-    Route::get('/clients', 'Admin\clientController@index')->name('clients.index');
-    Route::post('/clients/store', 'Admin\clientController@store')->name('clients.store');
-    Route::put('/clients/{id}', 'Admin\clientController@update')->name('clients.update');
-    Route::delete('/clients/{id}', 'Admin\clientController@destroy')->name('clients.destroy');
+    Route::get('/clients', 'Admin\ClientController@index')->name('clients.index');
+    Route::post('/clients/store', 'Admin\ClientController@store')->name('clients.store');
+    Route::put('/clients/{id}', 'Admin\ClientController@update')->name('clients.update');
+    Route::delete('/clients/{id}', 'Admin\ClientController@destroy')->name('clients.destroy');
     /*
     |--------------------------------------------------------------------------
     | Accounts Routes
