@@ -1,4 +1,4 @@
-<div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-dark fixed-top py-2 top-navbar">
+<div class="col-xl-10 col-lg-9 col-md-8 col-sm-12 ml-auto bg-dark fixed-top py-2 top-navbar">
     <div class="row align-items-center py-2">
         <div class="col-md-4">
             <h4 class="text-light text-uppercase mb-0">Dashboard</h4>

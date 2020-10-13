@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="{{asset('css/footer.css')}}" />
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('js/dataTables.min.js')}}"></script>
+     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </head>

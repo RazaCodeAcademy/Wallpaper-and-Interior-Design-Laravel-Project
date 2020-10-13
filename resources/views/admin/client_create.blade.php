@@ -5,7 +5,7 @@
         <div class="overlay">
             <div class="logo-text">
                 <h1>
-                    <button type="button" class="btn w-25 p-3 mt-3 mb-3 ml-5 border-white button-back" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn p-3 mt-3 mb-3 ml-5 border-white button-back" data-toggle="modal" data-target="#exampleModal">
                         <span class="span-style">BOOK WALLPAPER</span>
                     </button>
                 </h1>

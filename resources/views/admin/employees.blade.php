@@ -1,8 +1,6 @@
 @extends('layouts.admin-master')
 @section('title','Create New Employee')
 @section('content')
-<body class="gradiant">
-    <!-- start Code Here -->
     <section>
         <div class="container-fluid">
             <div class="row mt-4">

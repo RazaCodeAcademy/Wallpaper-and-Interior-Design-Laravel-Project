@@ -273,6 +273,41 @@ body{
 
 /* media query area */
 
+@media (max-width: 417px) {
+
+    .nav-h1-style{
+        font-size: 30px !important;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .span-style{
+        font-size:15px !important; color:white;
+      }
+
+    .logo-text h1{
+        font-size: 30px !important;
+    }
+
+    .nav-h1-style{
+        font-size: 35px;
+    }
+
+    .about-h1{
+        font-size: 20px !important;
+        font-weight: bold;
+    }
+
+    .h1-heading{
+        font-weight: bold;
+        font-size: 25px !important;
+    }
+
+
+}
+
 @media (max-width: 768px) {
     .sidebar{
         position: static;
@@ -283,10 +318,36 @@ body{
         position: static;
     }
 
+    .span-style{
+        font-size:25px; color:white;
+      }
+
+    .bg-container h1{
+        font-size: 25px !important;
+    }
+
+    .logo-text h1{
+        font-size: 40px;
+    }
+
+    .about-h1{
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .h1-heading{
+        font-size: 30px !important;
+    }
 
 }
 
+@media (max-width: 992px){
 
+    .h1-heading{
+        font-size: 35px !important;
+    }
+
+}
 
 @media (min-width: 300px) and (max-width: 992px){
 
