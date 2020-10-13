@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Auth::routes();
 Route::get('/interior-designers', 'IndexController@interior_designers')->name('home.interior_designers');
 Route::get('/contact', 'IndexController@contact')->name('home.contact');
 Route::get('/about', 'IndexController@about')->name('home.about');
 Route::get('/home', 'Admin\DashboardController@index')->name('admin.index');
-Route::get('/clients/{id}', 'Admin\clientController@show')->name('clients.show');
+Route::get('/clients/{id}', 'Admin\ClientController@show')->name('clients.show');
 Route::get('/', 'IndexController@index');
 Route::post('/notifications', 'Admin\NotificationController@store')->name('notifications.store');
 
@@ -95,5 +96,3 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/notifications', 'Admin\NotificationController@index')->name('notifications.index');
     Route::post('/notifications/show', 'Admin\NotificationController@show')->name('notifications.show');
 });
-
-Auth::routes();
