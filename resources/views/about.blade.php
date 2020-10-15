@@ -20,7 +20,7 @@
             <div class="logo-text"><h1>About Us</h1></div>
         </div>
     </div>
-    <div class="pl-5">
+    <div class="pl-4">
         <div class="row w-100">
             <div class="col-md-12 text-center mt-5">
                 <strong>About Our Company</strong>
@@ -45,7 +45,7 @@
             </div>
         </div>
     </div>
-    <div class="pl-5 mb-5">
+    <div class="pl-4 mb-5">
         <div class="row w-100 mt-5">
             <div class="col-md-8 mt-5 text-justify" style="font-size:19px;">
                 <p>Lubaba Interior is determined to provide complete <strong>Interior Designing Solutions</strong> to
