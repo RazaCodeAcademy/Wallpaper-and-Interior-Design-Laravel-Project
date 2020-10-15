@@ -17,9 +17,10 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = DB::table('projects')->
-        join('posts','posts.id','projects.paper_id',)->
-        select('projects.*','posts.*')->get();
+        // $projects = DB::table('posts')->
+        // join('projects','posts.id','projects.paper_id',)->
+        // select('projects.*','posts.*')->get();
+        $projects = Project::all();
         $posts = Post::all();
         return view('admin.projects',[
             'projects' => $projects,
@@ -55,7 +56,7 @@ class ProjectController extends Controller
         $project->project_title = $request->project_title;
         $project->paper_id = $request->paper_id;
         $project->total_role = $request->total_role;
-        
+
         $project->save();
         return redirect('/admin/projects/')->with('success','Data has been saved successfully');
     }
@@ -95,9 +96,10 @@ class ProjectController extends Controller
             'used_role'=>'required',
         ]);
 
-        $project = Project::find($id);
+
+        $project = Project::find(1);
         $project->used_role = $request->used_role;
-        
+
         $project->save();
         return redirect('/admin/projects/')->with('success','Data has been updated successfully');
     }

@@ -1,7 +1,82 @@
 @extends('layouts.admin-master')
 @section('title','Employee Payement Detail')
 @section('content')
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto mt-5">
+                    <div class="row align-items-between">
+                        <div class="col-xl-12 col-12 mb-4 mb-xl-0 ">
+                            <div class="d-flex mt-5">
+                                <h1 class="">Add Employee Payment</h1>
+                                <button type="button" class="btn btn-success mb-3 ml-auto" data-toggle="modal" data-target="#exampleModal">
+                                    Add Payment
+                                </button>
+                            </div>
+                            @if(count($errors)>0)
+                            <div class="alert-danger alert">
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
+
+                            @if(\Session:: has('success'))
+                                <div class="alert-success alert">
+                                    <p>{{\Session::get('success')}}</p>
+                                </div>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- start Code Here -->
+    <section>
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                    <div class="row align-items-between">
+                        <div class="col-xl-12 col-12 mb-4 mb-xl-0 ">
+                            <h3 class="text-muted text-center m-3">Staff Sallary</h3>
+                            <table id="datatable" class="table table-striped table-dark mt-2 text-center">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Project</th>
+                                        <th>Payment</th>
+                                        <th>Dated</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($payments as $payment)
+                                        <tr>
+                                            <td>{{ $payment->id }}</td>
+                                            <td>{{ $payment->first_name }} {{ $payment->last_name }}</td>
+                                            <td>{{ $payment->project_title }}</td>
+                                            <td>{{ $payment->payment }}</td>
+                                            <td>{{ $payment->created_at }}</td>
+                                            <td class="text-center">
+                                                <a href="#" class="btn btn-success edit">Edit</a>
+                                                <a href="#" class="btn btn-danger delete">Delete</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section>
         <div class="container-fluid">
             <div class="row mt-4">
@@ -133,57 +208,6 @@
                                     </form>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="container-fluid">
-                                <div class="d-flex">
-                                    <h1 class="w-100">Add Employee Payment</h1>
-                                    <button type="button" class="btn btn-success mt-3 mb-3 ml-auto w-25" data-toggle="modal" data-target="#exampleModal">
-                                        Add Payment
-                                    </button>
-                                </div>
-                                @if(count($errors)>0)
-                                <div class="alert-danger alert">
-                                    <ul>
-                                        @foreach($errors->all() as $error)
-                                            <li>{{$error}}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                @endif
-
-                                @if(\Session:: has('success'))
-                                    <div class="alert-success alert">
-                                        <p>{{\Session::get('success')}}</p>
-                                    </div>
-                                @endif
-                                <table id="datatable" class="table table-striped table-dark mt-2">
-                                    <thead>
-                                        <tr>
-                                            <th>Payment ID</th>
-                                            <th>Employee Name</th>
-                                            <th>Project Name</th>
-                                            <th>Payment</th>
-                                            <th>Created At</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($payments as $payment)
-                                            <tr>
-                                                <td>{{ $payment->id }}</td>
-                                                <td>{{ $payment->first_name }} {{ $payment->last_name }}</td>
-                                                <td>{{ $payment->project_title }}</td>
-                                                <td>{{ $payment->payment }}</td>
-                                                <td>{{ $payment->created_at }}</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-success edit">Edit</a>
-                                                    <a href="#" class="btn btn-danger delete">Delete</a>
-                                                </td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
                     </div>

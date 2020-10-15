@@ -117,10 +117,10 @@
                                     <p>{{\Session::get('success')}}</p>
                                 </div>
                             @endif
-                            <table id="datatable" class="table table-striped table-dark mt-2">
+                            <table id="datatable" class="table table-striped table-dark mt-2 text-center">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>#</th>
                                         <th>Category Title</th>
                                         <th>Created At</th>
                                         <th>Action</th>

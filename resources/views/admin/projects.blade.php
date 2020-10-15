@@ -72,7 +72,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="">Enter Used Role:</label>
-                                                    <input type="text" name="used_role" placeholder="Enter Used Role" class="form-control">
+                                                    <input type="text" name="used_role" id="paper" placeholder="Enter Used Role" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -138,7 +138,7 @@
                                 <table id="datatable" class="table table-striped table-dark mt-2">
                                     <thead>
                                         <tr>
-                                            <th>Project ID</th>
+                                            <th>#</th>
                                             <th>Project Name</th>
                                             <th>Wallpaper</th>
                                             <th>Total Role</th>
@@ -152,7 +152,7 @@
                                             <tr>
                                                 <td>{{ $project->id }}</td>
                                                 <td>{{ $project->project_title }}</td>
-                                                <td>{{ $project->title }}</td>
+                                                <td>{{ $project->post->title }}</td>
                                                 <td>{{ $project->total_role }}</td>
                                                 <td>{{ $project->used_role }}</td>
                                                 <td>{{ $project->created_at }}</td>
@@ -183,6 +183,7 @@
                 }
                 var data=table.row($tr).data();
                 console.log(data);
+                $('#paper').val(data[4])
 
                 $('#editForm').attr('action','/admin/projects/'+data[0]);
                 $('#editModal').modal('show');

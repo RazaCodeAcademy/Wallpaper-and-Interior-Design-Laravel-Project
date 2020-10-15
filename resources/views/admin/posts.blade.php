@@ -149,15 +149,15 @@
                                     <p>{{\Session::get('success')}}</p>
                                 </div>
                             @endif
-                            <table id="datatable" class="table table-striped table-dark mt-2">
+                            <table id="datatable" class="table table-striped table-dark mt-2 text-center">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Wallpaper Title</th>
-                                        <th>Wallpaper Price</th>
+                                        <th>#</th>
+                                        <th>Title</th>
+                                        <th>Price</th>
                                         <th>Category</th>
-                                        <th>Wallpaper Image</th>
-                                        <th>Created At</th>
+                                        <th>Image</th>
+                                        <th>Dated</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -170,7 +170,7 @@
                                             <td>{{ $post->category_title }}</td>
                                             <td><img src="{{asset('uploads/images/'.$post->image)}}" alt="image" width="50" height="50"></td>
                                             <td>{{ $post->created_at }}</td>
-                                            <td class="d-flex">
+                                            <td class="text-center">
                                                 <a href="#" class="btn btn-success edit">Edit</a>
                                                 <a href="#" class="btn btn-danger delete">Delete</a>
                                             </td>

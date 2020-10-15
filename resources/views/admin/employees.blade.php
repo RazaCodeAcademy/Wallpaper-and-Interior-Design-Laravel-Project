@@ -185,11 +185,10 @@
                                 <table id="datatable" class="table table-striped table-dark mt-2">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Mobile No</th>
-                                            <th>Cnic No</th>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Contact</th>
+                                            <th>Cnic</th>
                                             <th>Address</th>
                                             <th>Action</th>
                                         </tr>
@@ -198,8 +197,7 @@
                                         @foreach($employees as $emp)
                                             <tr>
                                                 <td>{{ $emp->id }}</td>
-                                                <td>{{ $emp->first_name }}</td>
-                                                <td>{{ $emp->last_name }}</td>
+                                                <td>{{ $emp->first_name }} {{ $emp->last_name }}</td>
                                                 <td>{{ $emp->contact }}</td>
                                                 <td>{{ $emp->cnic }}</td>
                                                 <td>{{ $emp->address }}</td>

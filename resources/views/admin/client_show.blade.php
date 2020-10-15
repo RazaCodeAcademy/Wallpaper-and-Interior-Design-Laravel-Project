@@ -10,14 +10,13 @@
                         <div class="col-xl-12 col-sm-12 p-22 mb-3">
                             <div class="container-fluid">
                                 <h1 class="text-center">Clients Information And Projects</h1>
-                                <table id="datatable" class="table table-striped table-dark mt-2">
+                                <table id="datatable" class="table table-striped table-dark mt-2 text-center">
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
+                                            <th>Name</th>
                                             <th>Email</th>
-                                            <th>Mobile No</th>
+                                            <th>Contact</th>
                                             <th>Address</th>
                                             <th>Wallpaper</th>
                                         </tr>
@@ -26,8 +25,7 @@
                                         @foreach($clients as $client)
                                             <tr>
                                                 <td>{{ $client->id }}</td>
-                                                <td>{{ $client->first_name }}</td>
-                                                <td>{{ $client->last_name }}</td>
+                                                <td>{{ $client->first_name }} {{ $client->last_name }}</td>
                                                 <td>{{ $client->email }}</td>
                                                 <td>{{ $client->contact }}</td>
                                                 <td>{{ $client->address }}</td>
