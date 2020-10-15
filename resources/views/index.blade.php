@@ -8,7 +8,7 @@
             <div class="logo-text"><h1>Lubaba Interior Design And Wallpaper</h1></div>
         </div>
     </div>
-    <div class="pl-5 mt-4">
+    <div class="pl-4 mt-4">
         <div class="row w-100">
             <div class="col-md-6 mt-5 text-justify" style="font-size:20px;">
                 <strong>Lubaba Interiors</strong> is The Best <strong>Home Wallpapers Shop</strong> in Gujrat.
@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div class="pl-5">
+    <div class="pl-4">
         <div class="row w-100">
             <div class="col-md-6 mt-5 w-100">
                 <img src="/images/wallpapers-1.jpg" class="w-100" alt="">
@@ -52,7 +52,7 @@
         <h1>CHINA WALLPAPERS</h1><br>
        <p>Below are our Exclusive catalog easily accessable on one click.</p>
     </div>
-    <div class="pl-5 mt-5">
+    <div class="pl-4 mt-5">
         <div class="row w-100">
         @foreach($posts as $post)
             <div class="col-md-4 mb-5 card-class">
